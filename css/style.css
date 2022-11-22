@@ -1,88 +1,149 @@
 *{
+    padding: 0;
     margin: 0;
-    padding:0 ;
-    box-sizing:border-box ;
-}
-
-body{
-    background-color: rgb(94, 148, 230);
-    font-family:'open Sans';
-}
-
-.contenedor{
-    padding: 60px 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;
-}
-
-.titulo{
-    color:#000000;
-    font-size:30px;
-    text-align: center;
-    margin-bottom:  60px;
-}
-
-.header{ 
-    width:100%;
-    height: 600px;
-    background-image: url('');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 
 nav{
-    text-align: right;
-    padding: 30px 50px 0 0;
-
-}
-
-nav > a{
-    color: rgb(201, 31, 31);
-    font-weight: 300;
-    margin-right: 10px;
-}
-
-nav a:hover{
-    text-decoration: underline;
-
-}
-
-header.textos-header{
-    display: flex;
-    height: 430px;
+    background-color: black;
+    height: 80px;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-
 }
-
-.textos-header h1{
+.enlace{
     position: absolute;
-    top: 0%;
-    font: size 50px; ;
-    color: rgb(255, 0, 0);
+    padding: 20px 50px;
 }
-
-.textos-header h2{
-    width:100%;
-    height: 600px;
-    background-image: url('https://lh3.googleusercontent.com/-c3xPccAX9m4/YLpNv9OflfI/AAAAAAAAAbY/3Q0XF67dlK8lQ-HIMX_0aOon0Ij3BZz1QCLcBGAsYHQ/w1200-h630-p-k-no-nu/1622822324565431-0.png');
+.logo{
+    height: 45px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background-color: rgb(48, 48, 165);
+    transition: 1s;
+}
+.checkbtn{
+    font-size: 35px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin: 5px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(/page/BB8DA835-5F83-45EC-8678-9E2365C80A6D.png) no-repeat;
     background-size: cover;
+    background-position: center center;
+    height: calc(50vh - 80px);
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
+}
+@media (max-width: 952px){
+    .checkbtn{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
 }
 
-.wave{
-    position: absolute;
-    bottom: 0;
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(20, 20, 27);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 1s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: rgb(72, 72, 151);
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+.container{
     width: 100%;
-
+    display: flex;
+    max-width: 1100px;
 }
+.card{
+    width: 100%;
+    margin: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0,0.2);
+    cursor: default;
+    transition: all 399ms ease;
+    position: relative;
+    top: 455px;
+    left: 360px;
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgb(0, 0, 0,0.4);
+    transform: translateY(3%);
+}
+.card img{
+    width: 100%;
+    height: 210px;
+}
+.card .contenido{
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 400px;
+}
+.card .contenido h3{
+    font-weight: 600;
+}
+.card .contenido p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+.noticias{
+    width: 100%;
+    margin: 0px;
+    position: relative;
+    top: 450px;
+    left: 887px;
+}
+
+
 
